@@ -1,0 +1,125 @@
+.header-profile{
+    height: 12rem;
+    font-size: 1.4rem;
+    background-color: $profile-caption-color;
+    @include mediaQuery(phone6){
+        height: 15rem;
+        flex-wrap: wrap;
+    }
+    .profile__logo{
+        height: auto;
+        width: 15rem;
+        margin-left: 6rem;
+        @include mediaQuery(phone6){
+          margin-left: 30%;
+        }
+     
+    }
+    .nav{
+        @include mediaQuery(phone6){
+           align-self: flex-end;
+        }
+        & > *{
+            //background-color: orangered;
+            cursor: pointer;
+            height: 100%;
+           &:not(:last-child){
+               margin-right: 2rem;
+           }
+           @include mediaQuery(phone6){
+            
+                margin-left: 1rem;
+            
+         }
+        }
+        &__box{
+            position: relative;
+            &-icon{
+                height: 2.5rem;
+                width: 2.5rem;
+                fill: $color-white;
+                &--shopping_cart{
+                    fill: $secondary-color-dark;
+                }
+            }
+            &-notif{
+                background-color: $primary-color-dark;
+                font-size: .8rem;
+                border-radius: 50%;
+                height: 2rem;
+                width: 2rem;
+                color: $color-white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: -1.8rem;
+                right: -.8rem;
+            }
+        }
+
+    
+
+     
+        &__user{
+            .user-name{
+                text-decoration: none;
+                color: $color-white;
+            }
+            &-photo{
+                height: 3.75rem;
+                width: 3.75rem;
+                border-radius: 50%;
+                background-size: cover;
+                background-position: top;
+                background-repeat: no-repeat;
+            }
+            &-name{
+                margin-left: 1rem;
+            }
+
+            .dropdown-menu{
+                background-color: $color-tertiary-light;
+                animation: slideIn 0.4s ease-in-out forwards;
+                margin-top: 3.5rem;
+            }
+            &-item{
+                font-size: 1.3rem;
+                list-style:none;
+               
+                &:hover{
+                    background-color: $color-tertiary-dark;
+                }
+            }
+
+            &-link{
+                text-decoration: none;
+                color: $color-white;
+                //text-transform: uppercase;
+                span{
+                    margin-left: 0.5rem;
+                }
+                svg{
+                    height: 2.5rem;
+                    width: 2.5rem;
+                }
+            }
+    
+    
+        }
+        &__online{
+              
+            .u-online{
+                position: absolute;
+                border-radius: 50%;
+                top: 2rem;
+                right: 2rem;
+                height: 1rem;
+                width: 1rem;
+                background-color: $color-green-light;
+                animation: pulse 3s ease-in-out infinite;
+            }
+        }
+    }
+
+}

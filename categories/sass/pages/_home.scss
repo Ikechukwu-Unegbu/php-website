@@ -1,0 +1,71 @@
+.post-container{
+
+    display: grid;
+    grid-template-rows:repeat(9,min-content);
+    grid-template-columns:[full-start] minmax(6rem,1fr)
+    [center-start] repeat(8,[col-start] minmax(min-content,14rem)[col-end])[center-end] 
+    minmax(6rem,1fr)[full-end];
+
+
+    .post-gallery{
+        
+        grid-column: full-start/full-end;
+    }
+    .post-author{
+      
+        grid-column: full-start/full-end;
+        grid-row: 2/3;
+    }
+    .redapp-image{
+      
+        grid-column: full-start/full-end;
+        grid-row: 3/4;
+    }
+    .post-body__content{
+        
+        grid-column: center-start/center-end;
+        grid-row: 4/5;
+        @include mediaQuery(tabletPort8){
+            grid-column: full-start/full-end;
+            grid-row: 4/5;
+        }
+  
+    }
+    .additional-content-info{
+       
+        grid-column: center-start/center-end;
+        grid-row: 5/6;
+        @include mediaQuery(tabletPort8){
+            grid-column: full-start/full-end;
+           
+        }
+    }
+    .contact-agent{
+        
+        grid-column: center-start/center-end;
+        grid-row: 6/7;
+        @include mediaQuery(tabletPort8){
+            grid-column: full-start/full-end;
+           
+        }
+
+    }
+    .post-comment{
+       
+        grid-column: center-start/center-end;
+        grid-row: 7/8;
+        @include mediaQuery(tabletPort8){
+            grid-column: full-start/full-end;
+           
+        }
+    }
+    .footer{
+        
+        grid-column: center-start/center-end;
+        grid-row: 8/9;
+        @include mediaQuery(tabletPort8){
+            grid-column: full-start/full-end;
+           
+        }
+    }
+}

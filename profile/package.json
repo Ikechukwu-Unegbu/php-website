@@ -1,0 +1,28 @@
+{
+  "name": "redapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "listen:sass": "node-sass sass/main.scss css/profile.css -w",
+    "server": "live-server --browser=chrome",
+    "init": "npm-run-all --parallel server listen:sass",
+    "compiled:sass": "node-sass sass/main.scss css/profile.compiled.css",
+    "concatenated:css": "concat -o css/profile.concatenated.css vendors/font-awesome-4.7.0/css/font-awesome.css css/profile.compiled.css",
+    "compressed:css": "node-sass css/profile.concatenated.css css/profile.css --output-profile compressed",
+    "final-build:css": "npm-run-all compiled:sass  concatenated:css compressed:css"
+  },
+  "author": "Rick",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "concat": "^1.0.3",
+    "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.2"
+  },
+  "dependencies": {},
+  "description": ""
+}

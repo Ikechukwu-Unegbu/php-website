@@ -1,0 +1,91 @@
+.btn-profile{
+    font-size:2rem;
+    color: $color-white;
+    text-transform: uppercase;
+  
+    width: 95%;
+    margin: 2rem auto;
+    background-image: linear-gradient(
+        to right,
+        $color-primary-violet-extra-light,
+        $color-primary-violet-dark
+    );
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    border-radius: 3rem;
+    
+
+    &__visible{
+        display: inline-block;
+        padding: 2rem 6rem;
+        height: 100%;
+        width:100%;
+        transition: all .4s;
+    }
+
+    &__invisible{
+        display: inline-block;
+        position: absolute;
+        height: 100%;
+        width:100%;
+        visibility: hidden;
+        left: -100%;
+        transition: all .4s;
+    }
+    &:hover{
+        background-image: linear-gradient(
+            to left,
+            $color-primary-violet-extra-light,
+            $profile-color-primary-blue
+        );
+    }
+    &:hover &__visible{
+        transform: translateX(100%);
+    }
+    &:hover &__invisible{
+       visibility: visible;
+       top: 25%;
+       transform: translateX(100%);
+    }
+    &:hover{
+        box-shadow: 0 1rem 2rem rgba(
+            $color-white, .4
+        );
+    }
+}
+
+//this is the btn for modal popup
+
+.popup-submit__btn-modal{
+    text-transform: uppercase;
+    position: absolute;
+    top: 60%;
+    right: 10%;
+    padding: 0.5rem 2rem;
+    font-size: 1.8rem;
+    box-shadow: 0 1rem 2rem rgba($color-black, .4);
+}
+
+//for the prfoile form submit btn
+
+.form-btn{
+    margin-top: 4rem;
+    font-size: 1.7rem;
+    background: linear-gradient(45deg, #25d366, #35465d);
+    padding: 2rem 4rem;
+    text-transform: uppercase;
+    box-shadow: 0 1rem 2rem rgba($color-black, .3);
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 2rem;
+    transition: all .3s;
+    width: 40%;
+
+
+    &:hover{
+        background: linear-gradient(90deg, #25d366, #35465d);
+        box-shadow: 0 1rem 2rem rgba($color-black, .5);
+    }
+}

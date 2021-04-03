@@ -1,0 +1,42 @@
+.post-author{
+    color: $color-white;
+    background-color: $color-tertiary-very-dark;
+    width: 100%;
+    &__details{
+        display: flex;
+        justify-content: center;
+    }
+    &__ring{
+        margin-top: 0.8rem;
+        margin-right: 1rem; 
+        background-color: $color-Golden-brown;
+        width: 9rem;
+        height: 9rem;
+        border-radius: 50%;
+        position: relative;
+        &-img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 8.2rem;
+            height: 8.2rem;
+            background-color: black;
+            border-radius: 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+    //box
+    
+    &__box{
+    
+        margin-left: 1rem;
+        .author__sold{
+            font-size: 1.6rem;
+        }
+        .author__name{
+            font-size: 2rem;
+        }
+    }
+}

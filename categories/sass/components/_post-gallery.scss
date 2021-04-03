@@ -1,0 +1,85 @@
+.post-gallery{
+    
+    background-image: linear-gradient(to bottom, rgba($profile-color-black,.9),rgba($profile-caption-primary,0.9));
+    font-family: $nunito-font;
+    position: relative;
+
+    .sliding-images{
+       
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(4,1fr);
+        width: 75%;
+        height: 60rem;
+        margin: 0 auto;
+        @include mediaQuery(phone6){
+            width: 100%;
+            height: 40rem;
+        }
+    }
+    .slide{
+        grid-column: 1/-1;
+        grid-row: 1/-1;
+
+        .carousel-inner{
+            img{
+                background-position: top !important;
+                background-size: cover !important;
+                background-repeat: no-repeat !important;
+                height: 60rem !important;
+                width: 100% !important;
+                @include mediaQuery(phone6){
+                   
+                    height: 40rem !important;
+                }
+            }
+        }
+
+    
+    }
+    .carousel-control-prev-icon, .carousel-control-next-icon{
+        width: 3rem !important;
+        height: 3rem !important;
+   
+    }
+
+    
+
+
+    .gallery-description{
+        z-index: 1;
+        width: 70%;
+        background-image: linear-gradient(rgba($color-tertiary-very-dark,.8),rgba($color-tertiary-very-dark,.8));
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        
+        padding: 0rem 3rem;
+        color: $color-white;
+        @include mediaQuery(phone6){
+                   
+            padding: 0 0;
+            width: 100%;
+        }
+        &-heading{
+            font-size: 3rem;
+            grid-column: 1 / span 2;
+            text-align: center;
+            grid-row: 1/2;
+
+        }
+        &--icons{
+            font-size: 2rem;
+            display: flex;
+            justify-content: center;     
+        }
+        &--desc{
+         margin-left: 1rem;
+        }
+
+    }
+}

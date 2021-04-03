@@ -1,0 +1,178 @@
+.section-posts{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 1rem 2rem;
+
+    .post{
+        position: relative;
+        padding: 1rem 2rem;
+        height: 60rem;
+        width: 100%;
+        box-shadow: 0 1rem 2rem rgba($color-black, .4);
+        overflow: hidden;
+        border-radius: 1.5rem;
+        transition: all .5s;
+        background-image: linear-gradient(
+            -45deg,#24ff72,#9a4eff
+        );
+
+        &__img{
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            height: 23.5rem;
+        
+        }
+       .carousel-inner{
+           height: 23.5rem !important;
+       }
+
+        &__total-images{
+            position: absolute;
+            top: 2%;
+            right: 2%;
+            color: $color-white;
+            z-index: 100;
+            background-color: rgba($profile-color-grey-dark-1, .8);
+            height: 2rem;
+            width: 2rem;
+            font-size: 1.5rem;
+            border-radius: 3px;
+
+            
+        }
+        &-heading{
+            position: absolute;
+            padding: 1rem 1.5rem;
+           
+            z-index: 1;
+            color: $color-white;
+            margin-top: 2rem;
+            height: 5rem;
+            overflow: hidden;
+            font-size: 1.8rem;
+        }
+
+        &__price{
+            position: absolute;
+            top: 40.5%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 2.5rem;
+            height: 5rem;
+            color: $color-white;
+        }
+        &-description{
+           
+            width: 100%;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 1.5rem;
+            height: 12.7rem !important;
+            overflow: hidden;
+            text-align: left;
+            color:$color-black;
+
+        }
+        &-link{
+            
+            
+            width: 100%;
+            color: $color-black; 
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            z-index: 1;
+            height: auto;
+            transform: translate(-50%,-50%);
+            &__edit,&__del,&__add-to-cart,&__checkout{
+                background: $color-white; 
+                width: 12rem;
+                height: 4rem;
+                border-radius: 3rem;
+                font-size: 1.6rem;
+                padding: 1rem 2rem;
+                box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+                text-decoration: none;
+            }
+            &__edit{
+                
+                margin-right: 1rem;
+            }
+            &__del{
+                margin-left: 1rem;
+            }
+            &__add-to-cart{
+                color: $color-white;
+                background:  $secondary-color-dark;
+            }
+            &__checkout{
+                color: $color-white;
+                background:  $secondary-color-dark;
+            }
+
+            &__edit:hover{
+                
+                color: $color-black;
+            }
+            &__del:hover{
+                color: $color-black;
+            }
+            &__add-to-cart:hover{
+                color: $color-black;
+                
+            }
+            &__checkout:hover{
+                color: $color-black;
+                
+            }
+  
+        }
+      
+      
+        &-details{
+            width: 100%;
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 0.5rem 1.5rem;
+            color: $color-white;
+            &__date-icon{
+               
+                color: $secondary-color;
+                margin-right: 1rem;
+            }
+           
+                &__map-icon{
+                    
+                    color: $profile-color-primary-light;
+                    margin-right: 1rem;
+                }
+            
+        
+            &__price-icon{
+                
+                color:$color-black;
+                margin-right: 1rem;
+            }
+        }
+    
+    }
+    // .post:hover{
+    //     transform: scale(1.05);
+    // }
+    .post:before{
+        content: "";
+        position: absolute;
+        top: 0;//it was bottom before
+        left: 0;
+        width: 100%;
+        height: 30%;//reverse these two
+        background: rgba(255,255,255,.3);
+        transform: skewY(-5deg) scale(1.7);
+    }
+    
+}
