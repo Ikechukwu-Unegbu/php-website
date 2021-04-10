@@ -1,188 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,400,700|Nunito+Sans:300,400,700|Open+Sans:300,400,700|Roboto:100,300,400,700" rel="stylesheet"> 
-    <!-- CSS styles -->
-    
-     <link rel="stylesheet" type="text/css" href="vendors/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="vendors/font-awesome-4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="css/profile.css">
-        <!-- Summernote links -->
-    <script src="vendors/js/jquery-3.4.0.min.js"></script> 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-lite.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-lite.js"></script>
+<?php include ("../bootstrap.php");?>
 
-    <title>Profile Admin, manage your ads, payment and campaigns from one place</title>
-</head>
-<body>
+<!-- head -->
+<?php include(ROOT_PATH."/profile/inc/head.php");?>
 
-<div class="container-fluid my-flex-container">
-    <header class="header-profile d-flex justify-content-between align-items-center">
-
-        <img src="img/white-logo.png" alt="thereadapp logo" class="profile__logo">
-        <nav class="nav">
-            <div class="nav__box">
-                <svg class="nav__box-icon">
-                    <use xlink:href="img/SVG/symbol-defs.svg#icon-envelope-open-o"></use>
-                </svg>
-                <span class="nav__box-notif">3</span>
-            </div>
-            <div class="nav__box">
-                <svg class="nav__box-icon">
-                    <use xlink:href="img/SVG/symbol-defs.svg#icon-comments"></use>
-                </svg>
-                <span class="nav__box-notif">7</span>
-            </div>
-           
-            <div class="nav__box">
-                <svg class="nav__box-icon nav__box-icon--shopping_cart">
-                    <use xlink:href="img/SVG/symbol-defs.svg#icon-shopping-cart"></use>
-                </svg>
-                <span class="nav__box-notif">7</span>
-            </div>
-            <div class="nav__user dropdown">
-                <img src="img/cristian-lozan-371397-unsplash.jpg" alt="cristian-lozan user img" class="nav__user-photo">
-                <a href="dropdown-toggle" data-toggle="dropdown" class="user-name">
-                    <span class="nav__user-name carrot">Rick &#9660;</span>
-                    <ul class="nav__user-dropdown dropdown-menu">
-                        <li class="nav__user-item">
-                            <a href="#" class="nav__user-link">
-                                <svg>
-                                    <use xlink:href="img/SVG/symbol-defs.svg#icon-sign-out">   
-                                    </use>
-                                </svg>
-                                <span>Sign out</span>
-                            </a>
-                        </li>
-                    </ul>
-                </a>
-
-            </div>
-            <div class="nav__online">
-                <span class="nav__notif u-online"></span>
-            </div>
-        </nav>
-
-    </header> 
+<!-- header -->
+<?php include(ROOT_PATH."/profile/inc/header.php");?>
 
     <div class="content d-flex">
       
-        <nav class="sidebar">
-            <input type="checkbox" class="sidebar__checkbox" id="navi-toggle">
-            <label for="navi-toggle" class="sidebar-menu__button"><span class="sidebar-menu__icon"></span></label>
-            <div class="sidebar-menu__background"></div>
-            <ul class="sidebar-nav" id="menu">
-                <li class="sidebar-nav__item ">
-                    <a href="#" class="sidebar-nav__link">
-                        <svg class="sidebar-nav__icon">
-                            <use xlink:href="img/SVG/symbol-defs.svg#icon-home"></use>
-                        </svg>
-                       <button type="submit" class="sidebar-nav__link-btn">Home</button>
-                    </a>
-                </li>
-                <li class="sidebar-nav__item ">
-                        <a href="#" class="sidebar-nav__link">
-                            <svg class="sidebar-nav__icon">
-                                <use xlink:href="img/SVG/symbol-defs.svg#icon-paypal"></use>
-                            </svg>
-                           <button type="submit" class="sidebar-nav__link-btn">Payments</button>
-                        </a>
-                </li>
-                <li class="sidebar-nav__item ">
-                        <a href="#" class="sidebar-nav__link">
-                            <svg class="sidebar-nav__icon">
-                                <use xlink:href="img/SVG/symbol-defs.svg#icon-area-chart"></use>
-                            </svg>
-                           <button type="submit" class="sidebar-nav__link-btn">Statistics</button>
-                        </a>
-                </li>
-                <li class="sidebar-nav__item">
-                        <a href="#" class="sidebar-nav__link">
-                            <svg class="sidebar-nav__icon">
-                                <use xlink:href="img/SVG/symbol-defs.svg#icon-box-add"></use>
-                            </svg>
-                           <button type="submit" class="sidebar-nav__link-btn">Complete Details</button>
-                        </a>
-
-
-                        <ul class="sidebar-nav">
-                                <li class="sidebar-nav__item ">
-                                        <a data-page="#" href="#" class="sidebar-nav__link">
-                                            <svg class="sidebar-nav__icon">
-                                                <use xlink:href="img/SVG/symbol-defs.svg#icon-edit"></use>
-                                            </svg>
-                                           <button type="submit" class="sidebar-nav__link-btn">edit</button>
-                                        </a>
-                                    </li>
-                    
-                                    <li class="sidebar-nav__item ">
-                                            <a href="#" class="sidebar-nav__link">
-                                                <svg class="sidebar-nav__icon">
-                                                    <use xlink:href="img/SVG/symbol-defs.svg#icon-refresh"></use>
-                                                </svg>
-                                               <button type="submit" class="sidebar-nav__link-btn">View</button>
-                                            </a>
-                                    </li>
-                        </ul>
-                </li>
-
-                <li class="sidebar-nav__item ">
-                        <a href="#" class="sidebar-nav__link">
-                            <svg class="sidebar-nav__icon">
-                                <use xlink:href="img/SVG/symbol-defs.svg#icon-bell-o"></use>
-                            </svg>
-                           <button type="submit" class="sidebar-nav__link-btn">Notification Center</button>
-                        </a>
-                </li>
-                <li class="sidebar-nav__item ">
-                        <a href="#" class="sidebar-nav__link">
-                            <svg class="sidebar-nav__icon">
-                                <use xlink:href="img/SVG/symbol-defs.svg#icon-cc-stripe"></use>
-                            </svg>
-                           <button type="submit" class="sidebar-nav__link-btn">Pay Posts</button>
-                        </a>
-                </li>
-                <li class="sidebar-nav__item ">
-                        <a href="#modal_popup" class="sidebar-nav__link">
-                            <svg class="sidebar-nav__icon">
-                                <use xlink:href="img/SVG/symbol-defs.svg#icon-eye"></use>
-                            </svg>
-                           <button type="submit" class="sidebar-nav__link-btn">Add/Update Photo</button>
-                        </a>
-                </li>
-            </ul>
-        </nav>
+    <!-- sidebar -->
+<?php include(ROOT_PATH."/profile/inc/sidebar.php");?>
 
         <main class="content-center ">
-                <div class="profile-search d-flex justify-content-between align-content-center">
-                    <div class="profile-search__search-box">
-                        <button class="icon-btn-left">
-                            <svg class="profile-search__search-box__icon">
-                                <use xlink:href="img/SVG/symbol-defs.svg#icon-search"></use>
-                            </svg>
-                        </button>
-                        <input type="text" class="profile-search__input"
-                        id="searched-place " autocomplete="off" placeholder="Type Postcode or Location...">
-                        <!--here should be the div that will display1 the searched places-->                       
-                    </div>
-
-                    <div class="profile-search__search-box">
-                        <input type="text" class="profile-search__input profile-search__input--2"
-                            id="searched-place " autocomplete="off" placeholder="Search Name or Profession...">
-                        <button class="icon-btn-right">
-                            <svg class="profile-search__search-box__icon">
-                                <use xlink:href="img/SVG/symbol-defs.svg#icon-paper-plane-o"></use>
-                            </svg>
-                        </button>                     
-                    </div>
-                    <button class="btn-profile profile-search__submit" id="submit-searchForm">
-                        <span class="btn-profile__visible">Search</span>
-                        <span class="btn-profile__invisible">Find Profiles</span>
-                    </button>                
-                </div>
+              <!-- Search-box -->
+        <?php include(ROOT_PATH."/profile/inc/search-box.php");?>
 
 
 

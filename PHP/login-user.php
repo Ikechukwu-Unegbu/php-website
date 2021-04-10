@@ -38,7 +38,7 @@ function login(){
                 $login = $user->userLogin($email,$db_password);
                 if($login){
                     $loggedInUser = createUserSession($login);
-                    echo json_encode(['msgcode' => 'success', 'msg'=> 'profile/index']);
+                    echo json_encode(['msgcode' => 'success', 'msg'=> 'profile/index.php']);
                 }
                 else{
                     echo json_encode(['msgcode' => 'no_password', 'msg'=> 'Please enter correct password']);
