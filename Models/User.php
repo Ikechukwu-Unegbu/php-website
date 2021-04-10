@@ -30,4 +30,27 @@ class User{
     $row = $this->db->single();
     return $row;
   }
+
+  public function findUserByEmail($user_email){
+    $this->db->query('SELECT * FROM users WHERE user_email = :user_email');
+
+    $this->db->bind(':user_email', $user_email);
+    $row = $this->db->single();
+    if($this->db->rowCount() >0){return $row;}else{ return false;}
+  }
+
+  public function userLogin($user_email,$user_password){
+    $this->db->query('SELECT * FROM users WHERE user_email = :user_email AND user_password = :user_password AND blocked = :blocked');
+    $this->db->bind(':user_email',$user_email);
+    $this->db->bind(':user_password',$user_password);
+    $this->db->bind(':blocked',false);
+    $row = $this->db->single();
+
+    if($this->db->rowCount()>0){
+        return $row;
+    }
+    else{
+        return false;
+    }
+  }
 }

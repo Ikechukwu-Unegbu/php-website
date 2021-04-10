@@ -1,13 +1,18 @@
-<?php include('bootstrap.php');  ?>
 
-<?php include(ROOT_PATH."inc/head.php");?>
+
+<?php
+include 'bootstrap.php';
+
+?>
+
+<?php include (ROOT_PATH ."/inc/head.php");?>
 
     <section class="section-register" id="section-register">
 
         <div class="register">
             <div class="register__form">
                 <form method="POST" action="<?php echo BASE_URL;?>php/register.php">
-                    <?php msgDanger('register_fail');?>
+                <?php msgDanger('register_fail')?>
                     <div class="register__form-heading">
                         Register
                     </div>
@@ -19,7 +24,6 @@
                         <label for="username" class="register__form__label"><i class="fa fa-user-o"></i> Choose Username</label>
                         <div class="username-error"></div>
                     </div>
-
                     <div class="register__form__group">
                             <input type="email" class="register__form__input email" placeholder="Email" id="email" name="email" autocomplete="off" required>
                             <label for="email" class="register__form__label email_label"><i class="fa fa-paper-plane-o"></i> Email Address</label>
@@ -49,5 +53,5 @@
         </div>
     </section>
 
-
-    <?php include(ROOT_PATH."inc/scripts.php");?>
+    <?php include('inc/scripts.php');?>
+    <?php //include (ROOT_PATH ."/inc/scripts.php");?>

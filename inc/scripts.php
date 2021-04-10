@@ -5,6 +5,6 @@
 <script src="<?php echo BASE_URL;?>js/menuClick.js"></script> 
 <script src="<?php echo BASE_URL;?>js/scroll.js"></script>  
 <script src="<?php echo BASE_URL;?>/js/registerValidation.js"></script>
-<script src="<?php echo BASE_URL;?>/js/loginValidation.js"></script>
+<script src="<?php echo BASE_URL;?>/js/loginValidation.js"></script>  
 </body>
 </htl>
