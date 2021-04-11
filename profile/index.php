@@ -21,12 +21,12 @@
 <!--Section for displaying all of our posts-->
 <?php include(ROOT_PATH."/profile/inc/active-posts.php");?>
 
-       
-                <!-- <div class="heading-tertiary">Our custom made modal</div> -->
-            
+
+<!-- <div class="heading-tertiary">Our custom made modal</div> -->
+
 <?php include(ROOT_PATH."/profile/inc/active-posts.php");?>
 <!--Profile Form goes here-->
-        
+
 <?php include(ROOT_PATH."/profile/inc/form.php");?>
 
 <!-- Section Cart-->
@@ -36,23 +36,23 @@
 <?php include(ROOT_PATH."/profile/inc/live-search.php");?>
 
 
-    <!-- display message  -->
-    <?php include(ROOT_PATH."/profile/inc/displayMsg.php");?>
+<!-- display message  -->
+<?php include(ROOT_PATH."/profile/inc/displayMsg.php");?>
 
 
-    <!--unpaid posts-->
-    <?php include(ROOT_PATH."/profile/inc/unpaid-posts.php"); ?>
-   
-        </main>
-    </div>
-    <!-- footer -->
-    <?php include(ROOT_PATH."/profile/inc/footer.php"); ?>
-   
+<!--unpaid posts-->
+<?php include(ROOT_PATH."/profile/inc/unpaid-posts.php"); ?>
+
+</main>
+</div>
+<!-- footer -->
+<?php include(ROOT_PATH."/profile/inc/footer.php"); ?>
+
 </div>
 
-  <!-- scripts -->
-  <?php include(ROOT_PATH."/profile/inc/profile-scripts.php"); ?>
-   
+<!-- scripts -->
+<?php include(ROOT_PATH."/profile/inc/profile-scripts.php"); ?>
+
 
 </body>
 </html>

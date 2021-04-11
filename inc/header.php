@@ -50,7 +50,11 @@
                         <a href="post.html" >Post Free</a>
                 </li>
                 <li>
-                        <a href="login.php" >Login</a>
+                    <?php if(isset($_SESSION['user_id'])):?>
+                    <a href="<?php echo BASE_URL;?>php/logout.php" >Logout</a>
+                    <?php else: ?>
+                        <a href="<?php echo BASE_URL;?>php/login.php">Login</a>
+                    <?php endif;?>
                 </li>
             </ul>
         </nav>

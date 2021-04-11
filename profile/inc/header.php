@@ -1,4 +1,3 @@
-
 <div class="container-fluid my-flex-container">
     <header class="header-profile d-flex justify-content-between align-items-center">
 

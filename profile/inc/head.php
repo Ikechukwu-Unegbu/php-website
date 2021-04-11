@@ -18,3 +18,8 @@
     <title>Profile Admin, manage your ads, payment and campaigns from one place</title>
 </head>
 <body>
+
+
+<?php if(!isLoggedIn()):?>
+<?php redirect("login.php")?>
+<?php endif;?>
