@@ -1,3 +1,16 @@
+<?php  
+    include(ROOT_PATH."models/User.php");
+    $user =new User();
+
+    if(isset($_SESSION['user_id'])){
+        $user_id = filter_var($_SESSION['user_id'], FILTER_SANITIZE_NUMBER_INT);
+        $the_user = $user->getUserById($user_id);
+        //print_r($the_user);
+    }
+
+
+?>
+
 <div class="container-fluid my-flex-container">
     <header class="header-profile d-flex justify-content-between align-items-center">
 
@@ -25,10 +38,10 @@
             <div class="nav__user dropdown">
                 <img src="img/cristian-lozan-371397-unsplash.jpg" alt="cristian-lozan user img" class="nav__user-photo">
                 <a href="dropdown-toggle" data-toggle="dropdown" class="user-name">
-                    <span class="nav__user-name carrot">Rick &#9660;</span>
+                    <span class="nav__user-name carrot"><?php echo $the_user->user_name;?> &#9660;</span>
                     <ul class="nav__user-dropdown dropdown-menu">
                         <li class="nav__user-item">
-                            <a href="#" class="nav__user-link">
+                            <a href="<?php echo BASE_URL?>php/logout.php" class="nav__user-link">
                                 <svg>
                                     <use xlink:href="img/SVG/symbol-defs.svg#icon-sign-out">   
                                     </use>

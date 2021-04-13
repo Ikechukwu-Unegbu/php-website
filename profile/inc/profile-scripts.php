@@ -5,4 +5,5 @@
           placeholder: 'Content goes here',
        
         });
+        console.log("This works");
 </script>

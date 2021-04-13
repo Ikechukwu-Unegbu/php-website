@@ -68,4 +68,5 @@ class Database{
   public function lastInsertedId(){
     return $this->stmt->lastInsertedId();
   }
+  
 } 

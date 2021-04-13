@@ -53,4 +53,20 @@ class User{
         return false;
     }
   }
+
+  // public function getUserById($user_id){
+  //   $this->db->query('SELECT user_id, user_name, user_firstname, user_lastname, 
+  //   user_email, user_phone, user_occupation, user_image FROM users WHERE user_id = :user_id');
+  //   $this->db->bind(':user_email', $user_id);
+  //   $row = $this->db->single();
+  //   return $row;
+  // }
+
+  public function getUserById($user_id){
+    $this->db->query('SELECT user_id,user_name,user_firstname,user_lastname,user_bio,user_email,user_phone,user_occupation,user_image,user_linkedin,user_gplus
+     FROM users WHERE user_id = :user_id');
+    $this->db->bind(':user_id',$user_id);
+    $row = $this->db->single();
+    return $row;
+  }
 }

@@ -53,6 +53,3 @@
 <!-- scripts -->
 <?php include(ROOT_PATH."/profile/inc/profile-scripts.php"); ?>
 
-
-</body>
-</html>
